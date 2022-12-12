@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Broadcasted should not change prototype of class 1`] = `
+__TestService {
+  "someBroadcastedFunction": [Function],
+  "someBroadcastedMethod": [Function],
+}
+`;

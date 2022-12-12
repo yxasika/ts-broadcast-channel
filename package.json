@@ -6,7 +6,7 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "jest --config jestconfig.json",
+    "test": "jest --config jestconfig.json --no-cache",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build",
@@ -14,7 +14,9 @@
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags",
-    "start-local-npm": "verdaccio"
+    "start-local-npm": "verdaccio",
+    "local-npm-adduser": "npm adduser --registry http://localhost:4873/",
+    "local-npm-publish": "npm publish --registry http://localhost:4873/"
   },
   "files": [
     "lib/**/*"
@@ -33,7 +35,7 @@
     "broadcast-channel"
   ],
   "author": "Sven Goetz",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/yxasika/ts-broadcast-channel/issues"
   },
